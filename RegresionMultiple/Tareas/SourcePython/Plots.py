@@ -116,7 +116,8 @@ def PlotExpectedEstimate(
     return fig
 
 def PlotPredictResiduals(
-        LinearModel
+        LinearModel,
+        TargetName: str,
     ):
     """
     Función para plotear los residuales 
@@ -130,7 +131,7 @@ def PlotPredictResiduals(
         y = LinearModel.resid,
         ax = axes,
     )
-    axes.set_xlabel('Juegos Ganados')
+    axes.set_xlabel(TargetName)
     axes.set_ylabel('Residual')
     axes.set_title('Residuales en Función de la Respuesta Predicha',size=13)
 
