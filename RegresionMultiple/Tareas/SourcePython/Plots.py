@@ -148,8 +148,8 @@ def PlotVariableResiduals(
     """
 
     fig , axes = plt.subplots(
-        3,
-        figsize = (7,10),
+        len(FeaturesModel),
+        figsize = (7,3*len(FeaturesModel)+1),
         layout = 'tight',
     )
 
@@ -161,6 +161,6 @@ def PlotVariableResiduals(
         )
         ax.set_ylabel('Residuales')
 
-    fig.suptitle('Residuales en Función de las Variables Regresoras',size=13)
+    fig.suptitle('Residuales en Función de las Variables Regresoras',size=13,y=1.0)
 
     return fig
